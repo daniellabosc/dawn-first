@@ -111,7 +111,7 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "tops"
           }
         },
         "product": {
@@ -124,7 +124,7 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "tops"
           }
         }
       },
