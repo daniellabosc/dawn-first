@@ -81,9 +81,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Fresh layers for winter",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Get ready for chilly weather with clothes that layer up or down to suit your needs. You deserve to feel comfortable!<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
