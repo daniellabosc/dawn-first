@@ -54,14 +54,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Comfortable and beautiful clothes for the plus sized woman<\/p>",
-            "heading_size": "h1"
+            "heading": "<p>Ximena Plus<\/p>",
+            "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We empower women to shine<\/p>"
+            "text": "<p>Comfortable and Beautiful clothes for plus sized women.<\/p>"
           }
         }
       },
