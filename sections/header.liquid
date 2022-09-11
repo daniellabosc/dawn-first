@@ -27,9 +27,6 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-.separator{
-   margin-left: 4px;
-  }
   .header-wrapper{
    background-color:#ededed!important;
   }
@@ -446,7 +443,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span><span class="separator">|</span>
+                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                   </a>
                 {%- endif -%}
               </li>
