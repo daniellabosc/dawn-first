@@ -1,5 +1,35 @@
 {
   "sections": {
+    "1662890495d3e19887": {
+      "type": "rich-text",
+      "blocks": {
+        "1662890495b9a918d0-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ximena Plus<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1662890495b9a918d0-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1662890495b9a918d0-0",
+        "1662890495b9a918d0-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -39,6 +69,7 @@
     }
   },
   "order": [
+    "1662890495d3e19887",
     "banner",
     "product-grid",
     "166285807880a9e897"
