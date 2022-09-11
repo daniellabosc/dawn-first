@@ -216,6 +216,7 @@
     },
     "16628581198484bd4b": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "Contact form",
         "heading_size": "h1",
