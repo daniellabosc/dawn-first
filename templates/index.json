@@ -301,7 +301,7 @@
         "16628569315a401286-0": {
           "type": "video",
           "settings": {
-            "cover_image": "shopify:\/\/shop_images\/71XMTRf2HJL._AC_SR920_736.jpg",
+            "cover_image": "shopify:\/\/shop_images\/16493981792a184e332c265dcaf7fee1b9667c7daa_thumbnail_900x_deb7df36-4316-4a2f-ab64-54ed1f002deb.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
             "description": "Describe the video",
             "image_padding": false
@@ -317,7 +317,7 @@
         "16628569315a401286-2": {
           "type": "collection",
           "settings": {
-            "collection": "shoes"
+            "collection": "bottoms"
           }
         }
       },
