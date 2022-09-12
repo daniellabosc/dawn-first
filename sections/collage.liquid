@@ -4,6 +4,9 @@
 {{ 'component-modal-video.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+    .collage__item{
+    border:2px solid blue!important
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
