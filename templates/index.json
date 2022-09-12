@@ -174,6 +174,16 @@
     "16628569314c3d72cf": {
       "type": "collage",
       "blocks": {
+        "16628569315a401286-0": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/16493981792a184e332c265dcaf7fee1b9667c7daa_thumbnail_900x_deb7df36-4316-4a2f-ab64-54ed1f002deb.webp",
+            "video_url": "",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        },
         "16628569315a401286-1": {
           "type": "product",
           "settings": {
@@ -186,22 +196,12 @@
           "settings": {
             "collection": "bottoms"
           }
-        },
-        "16628569315a401286-0": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "cover_image": "shopify:\/\/shop_images\/16493981792a184e332c265dcaf7fee1b9667c7daa_thumbnail_900x_deb7df36-4316-4a2f-ab64-54ed1f002deb.webp",
-            "video_url": "",
-            "description": "Describe the video",
-            "image_padding": false
-          }
         }
       },
       "block_order": [
+        "16628569315a401286-0",
         "16628569315a401286-1",
-        "16628569315a401286-2",
-        "16628569315a401286-0"
+        "16628569315a401286-2"
       ],
       "settings": {
         "heading": "",
