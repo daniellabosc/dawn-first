@@ -12,6 +12,9 @@
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
+    .grid__item{
+    border:2px solid #333!important
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
