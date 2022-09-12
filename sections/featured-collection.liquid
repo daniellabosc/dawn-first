@@ -12,12 +12,12 @@
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
-  .grid__item{
+  .collection .grid__item{
       border:1px solid #c7c9ca!important;
       background:#c7c9ca;
   }
-  .grid__item a, .grid__item a:link{
-      text-align:center
+  .collection .grid__item a, .collection.grid__item a:link{
+      text-align:center!important
   }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
