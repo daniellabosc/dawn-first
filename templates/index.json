@@ -171,48 +171,6 @@
         "padding_bottom": 36
       }
     },
-    "16628569314c3d72cf": {
-      "type": "collage",
-      "blocks": {
-        "16628569315a401286-0": {
-          "type": "video",
-          "settings": {
-            "cover_image": "shopify:\/\/shop_images\/16493981792a184e332c265dcaf7fee1b9667c7daa_thumbnail_900x_deb7df36-4316-4a2f-ab64-54ed1f002deb.webp",
-            "video_url": "",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "16628569315a401286-1": {
-          "type": "product",
-          "settings": {
-            "product": "skirt-1",
-            "second_image": false
-          }
-        },
-        "16628569315a401286-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "bottoms"
-          }
-        }
-      },
-      "block_order": [
-        "16628569315a401286-0",
-        "16628569315a401286-1",
-        "16628569315a401286-2"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1662857786bb9d10cb": {
       "type": "featured-collection",
       "settings": {
@@ -247,7 +205,6 @@
     "featured_collection",
     "collage",
     "1662848057bb277664",
-    "16628569314c3d72cf",
     "1662857786bb9d10cb"
   ]
 }
