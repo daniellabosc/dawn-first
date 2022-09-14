@@ -12,6 +12,20 @@
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
+  .collection .grid__item{
+      border:1px solid #c7c9ca!important;
+      background:#c7c9ca;
+  }
+  .collection .grid__item a, .collection.grid__item a:link{
+      text-align:center!important
+  }
+  .price {
+    text-align:center!important
+  }
+  .title{
+    font-size:4rem!important;
+    color:#7f8c94;
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
