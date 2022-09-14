@@ -81,12 +81,12 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Tops",
+        "title": "Bottoms",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "tops",
+        "collection": "bottoms",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
