@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="card">
+        <h1>collections</h1>
+        {% for collection in collections %}
+            <h1>{{collection.title}}</h1>
+            <img style="width:40vw" src="{{ collection.featured_image | image_url }}">
+        {% endfor %}
+    </div>
+</div>

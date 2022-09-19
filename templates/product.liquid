@@ -1,0 +1,43 @@
+<div class="container border border-dark">
+    <div class="row col-12">
+        <h1>{{product.title}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <div class="card">
+                <div class="card-header">
+                    <img style="width:40vw" src="{{ product.featured_image | image_url }}" />
+                  </div>
+                <div class="card-body">
+                 
+                </div>
+                <div class="card-footer">
+                    card footer
+                  </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="col-12">{{ product.title }}</h1>
+                  </div>
+                <div class="card-body">
+                 
+                 <h6  class="col-12">{{ product.price | money }}</h6>
+                </div>
+                <div class="card-footer">
+                  {% form 'product', product %}
+                    <select name="id">
+                      {% for variant in product.variants %}
+                          <option value={{ variant.id }}>
+                            {{ variant.title }}
+                          </option>
+                      {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-primary">add to cart</button>
+                   {% endform %}
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>

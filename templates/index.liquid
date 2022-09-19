@@ -1,0 +1,40 @@
+<div class="fluid-container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            {% for collection in collections %}
+               
+                    <a href="{{collection.url}}">
+                       <h1>{{collection.title}}</h1>
+                    </a>
+                    <div class="row">
+                        {% for product in collections[{{collection.title}}].products %}
+                          
+                                <div class="card col-lg-3">
+                                    <div class="card-body">
+                                     <img style="width:12vw" src="{{product.featured_image | image_url }}" />
+                                      
+                                    </div>
+                                    <div class="card-footer" style="display:flex;flex-direction:row;justify-content:space-between">
+                                        <a href="{{product.url}}">{{ product.title }}</a>
+                                        {{ product.price | money }}
+                                    </div>
+                                    <div class="card-footer">
+                                        {% form 'product', product %}
+                                            <select name="id">
+                                              {% for variant in product.variants %}
+                                                  <option value={{ variant.id }}>
+                                                    {{ variant.title }}
+                                                  </option>
+                                              {% endfor %}
+                                            </select>
+                                            <button type="submit" class="btn btn-primary">add to cart</button>
+                                           {% endform %}
+                                    </div>
+                                  </div>
+                           
+                          {% endfor %}
+                    </div>
+            {% endfor %}
+        </div>
+    </div>      
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card">
+        <h1>search</h1>
+
+        <form action="/search">
+            <input type="search" name="q">
+        <button type="submit">search</button>
+        </form>
+
+        {% if search.performed %}
+            <h1>results</b>
+
+            {% for result in search.results %}
+                <p>{{ result.object_type }}<p>
+                <p>{{ result.title }}</p>
+                {% endfor %}    
+        {% endif %}
+
+
+    </div>
+</div>
