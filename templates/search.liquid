@@ -1,21 +1,31 @@
 <div class="container">
     <div class="card">
+        <div class="card-body">
         <h1>search</h1>
 
         <form action="/search">
-            <input type="search" name="q">
-        <button type="submit">search</button>
+        <input type="search" name="q">
+        <button type="submit" class="btn btn-primary">search</button>
         </form>
-
+    </div>
         {% if search.performed %}
-            <h1>results</b>
-
-            {% for result in search.results %}
-                <p>{{ result.object_type }}<p>
-                <p>{{ result.title }}</p>
-                {% endfor %}    
+            <div class="card-body">
+                <h5>{{ search.results_count}} result/s for search term "{{ search.terms }}"<h5>
+                <div class="row">
+                    {% for product in search.results %}
+                        <div class="card col-lg-3">
+                            <div class="card-body">
+                                <img style="width:12vw" src="{{product.featured_image | image_url }}" />
+                            </div>
+                            <div class="card-body">
+                                <hr class="product-separator" />
+                                <h6><a href="{{product.url}}">{{ product.title }}</a></h6>
+                                <h6>{{ product.price | money }}</h6>
+                            </div>
+                        </div>
+                  {% endfor %}
+                </div>
+            </div>
         {% endif %}
-
-
     </div>
 </div>

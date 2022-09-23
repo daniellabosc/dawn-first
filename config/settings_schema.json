@@ -4,9 +4,27 @@
     "settings": [
       {
         "type": "color",
-        "id": "background",
-        "label": "Background Color",
+        "id": "background-primary",
+        "label": "Background Primary",
+        "default": "#E8ECF4"
+      },
+      {
+        "type": "color",
+        "id": "background-secondary",
+        "label": "Background Secondary",
+        "default": "#E8ECF4"
+      },
+      {
+        "type": "text",
+        "id": "text-dark",
+        "label": "Text Dark",
         "default": "#333333"
+      },
+      {
+        "type": "text",
+        "id": "accent-one",
+        "label": "Accent One",
+        "default": "#ffffff"
       }
     ]
   }

@@ -1,3 +1,53 @@
+a, a:hover {
+    color: {{ settings.text-dark }};
+    text-decoration: none;
+    background-color: transparent;
+}
 body, .container, .card{
-    background-color: {{ settings.background }}!important
+    background-color: {{ settings.background-primary }};
+    color: {{ settings.text-dark }};
+}
+.card{
+    background-color: {{ settings.background-secondary }};
+    color: {{ settings.text-dark }};
+}
+.card-header, .card-footer{
+    background-color: {{ settings.background-secondary }};
+    color: {{ settings.text-dark }};
+}
+.container-box{
+    color: {{ settings.text-dark }};
+    margin-top:30px;
+} 
+.header-block{
+    padding:20px;
+    background-color: {{ settings.background-primary }};
+    color: {{ settings.accent-one }};
+}
+hr{
+    background-color: {{ settings.accent-one }};
+    height:2px
+}
+.collection-block{
+    background-color: {{ settings.background-primary }};
+    color: {{ settings.accent-one }};
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    jusify-content:center;
+    height:60vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.btn-large{
+    width:100%
+} 
+.btn-primary{
+    background-color: {{ settings.accent-one }};
+}
+input[type="search"]{
+    border: 1px solid {{ settings.text-dark }};
+    border-radius:6px;
+    padding:4px;
+    height:36px;
 }

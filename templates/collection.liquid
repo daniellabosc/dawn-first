@@ -1,9 +1,18 @@
 <div class="container">
-    <div class="row col-12"><h1>{{ collection.title }}</h1></div>
+    <div class="row col-12"><h2 class="header-block">{{ collection.title }}</h1></div>
     <div class="row">
-        <div class="col-7">
-            <img style="width:40vw" src="{{ collection.featured_image | image_url }}" />
-        </div>
-        <div class="col-4"></div>
+        {% for product in collection.products %}
+            <div class="card col-lg-3">
+                <div class="card-body">
+                    <img style="width:12vw" src="{{product.featured_image | image_url }}" />
+                </div>
+                <div class="card-body">
+                    <hr class="product-separator" />
+                    <h6><a href="{{product.url}}">{{ product.title }}</a></h6>
+                    <h6>{{ product.price | money }}</h6>
+                </div>
+                
+            </div>
+        {% endfor %}
     </div>
 </div>
