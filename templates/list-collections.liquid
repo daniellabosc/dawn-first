@@ -1,19 +1,50 @@
 <div class="container">
-    <div class="card">
+    <div class="card" style="border:none">
        
         <h2 class="header-block">Collections</h2>
         <div class="card-body">
             <div class="row">
             {% for collection in collections %}
+                {% if collection.title == 'Tops'%}
                 <a href="/collections/{{collection.title | downcase }}">
                     <div class="col-4">
                         <div class="card-body collection-block" style="background-image:url({{ collection.featured_image | image_url }})">
                             <div>
                                 <h1>{{collection.title}}</h1>
+                                <h6>{{collection.description}}</h6>
                             </div>
                     </div>
                 </a>
             </div>
+        {% endif %}
+            {% endfor %}
+            {% for collection in collections %}
+                {% if collection.title == 'Bottoms'%}
+                <a href="/collections/{{collection.title | downcase }}">
+                    <div class="col-4">
+                        <div class="card-body collection-block" style="background-image:url({{ collection.featured_image | image_url }})">
+                            <div>
+                                <h1>{{collection.title}}</h1>
+                                <h6>{{collection.description}}</h6>
+                            </div>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+            {% endfor %}
+            {% for collection in collections %}
+                {% if collection.title == 'Shoes'%}
+                <a href="/collections/{{collection.title | downcase }}">
+                    <div class="col-4">
+                        <div class="card-body collection-block" style="background-image:url({{ collection.featured_image | image_url }})">
+                            <div>
+                                <h1>{{collection.title}}</h1>
+                                <h6>{{collection.description}}</h6>
+                            </div>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
             {% endfor %}
         </div>
         </div>

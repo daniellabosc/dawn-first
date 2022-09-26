@@ -1,14 +1,22 @@
+<style>
+    .image-anchor{
+        height:100vh;
+        width:100%;
+        background-image: url({{ product.featured_image | image_url }});
+        background-size:cover
+    }
+</style>
 <div class="container">
     <div class="row col-12">
-        <h1 class="header-block">{{product.title}}</h1>
+        <h4 class="header-block"><i>{{product.title}}</i></h4>
     </div>
     <div class="row">
         <div class="col-7">
             <div class="card">
                 <div class="card-body">
-                    <img style="width:39vw" src="{{ product.featured_image | image_url }}" />
-                  </div>
-              </div>
+                    <div class="image-anchor"></div>
+                </div>
+            </div>
         </div>
         <div class="col-4">
             <div class="card">

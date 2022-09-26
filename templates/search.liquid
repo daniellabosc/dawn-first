@@ -1,13 +1,5 @@
 <div class="container">
     <div class="card">
-        <div class="card-body">
-        <h1>search</h1>
-
-        <form action="/search">
-        <input type="search" name="q">
-        <button type="submit" class="btn btn-primary">search</button>
-        </form>
-    </div>
         {% if search.performed %}
             <div class="card-body">
                 <h5>{{ search.results_count}} result/s for search term "{{ search.terms }}"<h5>

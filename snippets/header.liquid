@@ -1,6 +1,6 @@
 <style>
   .navbar{
-   height:12vh;
+   height:18vh;
   }
   .navbar-nav{
     width:72vw;
@@ -10,6 +10,23 @@
   .nav-link{
     font-size:1.6em;
     color: {{ settings.text-dark }};
+  }
+  .search-block{
+    position:relative;
+    right:18vw
+  }
+  .search-block form{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+    position:relative;
+    left:400
+  }
+  .cart-icon{
+    width:32px;
+    height:32px;
+    margin-top:12px;
+    margin-left:6px
   }
 </style>
 
@@ -26,8 +43,21 @@
                 <a class="nav-link" href="{{ link.url }}">{{ link.title}}</a>
             </li>
         {%- endfor %}
+        <li>
+          <a href="/cart">
+            <h6>{{ cart.item_count }}
+              <img src="/assets/cart-icon.png" class="cart-icon" />
+            </h6>
+          </a>
+        </li>
       </ul>
+      <div class="search-block">
+      <form action="/search">
+        <input type="search" name="q">
+        <button type="submit" class="btn btn-primary">search</button>
+        </form>
+      </div>
     </div>
   </nav>
-
+  {% render 'branding' %}
 </header>

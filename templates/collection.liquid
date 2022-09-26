@@ -1,11 +1,15 @@
+
 <div class="container">
     <div class="row col-12"><h2 class="header-block">{{ collection.title }}</h1></div>
     <div class="row">
         {% for product in collection.products %}
             <div class="card col-lg-3">
-                <div class="card-body">
-                    <img style="width:12vw" src="{{product.featured_image | image_url }}" />
-                </div>
+                <div class="card-body image-anchor row">
+                    <div class="col-12"
+                  style="
+                  background-image: url({{product.featured_image | image_url }});background-size:cover">
+                    </div>
+            </div>
                 <div class="card-body">
                     <hr class="product-separator" />
                     <h6><a href="{{product.url}}">{{ product.title }}</a></h6>

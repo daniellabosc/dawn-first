@@ -9,13 +9,28 @@
                 {% for item in cart.items %}
                     <div class="card">
                         <div class="card-body row">
-                            <div class="col-12">{{ item.title }}</div>
+                            <div class="col-12 row mb-3">
+                                <div class="col-12">
+                                    {{ item.title }}
+                                </div>
+                                <div class="col-12 row">
+                                    <div class="col-2">
+                                        <img style="height:120px;width:120px" src="{{ item.image | image_url }}" />
+                                    </div>
+                                    <div class="col-8">
+                                        {{ item.description }}
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-8">  
                                 <input type="number" name="updates[]" value="{{item.quantity}}"> at {{ item.price | money}}
                             </div>
                             <div class="col-4">
                                 {{ item.final_line_price | money }}
-                                <a href="{{item.url_to_remove}}">Remove</a>
+                                <button type="submit" name="update" class="btn btn-primary">update</button>
+                                <a href="{{item.url_to_remove}}">
+                                    <button class="btn btn-primary">Remove</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -25,8 +40,8 @@
       <div class="row">
             <h1 class="col-8 mx-3">{{cart.total_price | money}}</h1>
             <div class="col-3">
-                <button type="submit" name="update" class="btn btn-primary">update</button>
-                <button type="submit" name="checkout" class="btn btn-primary">checkout</button>
+                
+                <button type="submit" name="checkout" class="btn btn-primary btn-large">checkout</button>
             </div>
         </div>
         {% endform %}

@@ -17,12 +17,12 @@ body, .container, .card{
 }
 .container-box{
     color: {{ settings.text-dark }};
-    margin-top:30px;
 } 
 .header-block{
     padding:20px;
     background-color: {{ settings.background-primary }};
     color: {{ settings.accent-one }};
+    border:none
 }
 hr{
     background-color: {{ settings.accent-one }};
@@ -32,12 +32,15 @@ hr{
     background-color: {{ settings.background-primary }};
     color: {{ settings.accent-one }};
     display:flex;
-    flex-direction:column;
-    align-items:center;
-    jusify-content:center;
+    flex-direction:row;
+    align-items:flex-start;
+    jusify-content:flex-start;
     height:60vh;
     background-repeat:no-repeat;
     background-size:cover;
+}
+.btn{
+    margin:0 3px;
 }
 .btn-large{
     width:100%
@@ -46,10 +49,10 @@ hr{
     background-color: {{ settings.accent-one }};
 }
 input[type="search"]{
-    border: 1px solid {{ settings.text-dark }};
+    border: 1px solid {{ settings.accent-one }};
     border-radius:6px;
     padding:4px;
-    height:36px;
+    height:39px;
 }
 input[type="number"]{
     border: 1px solid {{ settings.text-dark }};
@@ -57,4 +60,15 @@ input[type="number"]{
     padding:4px;
     height:36px;
     width: 64px;
+}
+.image-anchor{
+    width:280px;
+    height:280px;
+    background-repeat:no-repeat;
+}
+.product-separator{
+    width:100%;
+}
+.card-footer{
+    border:none;
 }

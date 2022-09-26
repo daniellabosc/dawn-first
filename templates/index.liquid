@@ -1,5 +1,5 @@
 <div class="fluid-container">
-    <div class="my-5">
+    
         <div class="container">
             <div class="container container-box">
                 <a href="collections/tops">
@@ -9,11 +9,14 @@
                 {% for product in collections['tops'].products %}
                 
                         <div class="card col-lg-3">
-                            <div class="card-body">
-                                <img style="width:12vw" src="{{product.featured_image | image_url }}" />
+                            <div class="card-body image-anchor row">
+                                <div class="col-12"
+                              style="
+                              background-image: url({{product.featured_image | image_url }});background-size:cover">
+                                </div>  
                             </div>
-                            <div class="card-body">
-                                <hr class="product-separator" />
+                            <hr class="product-separator" />
+                            <div class="card-footer">
                                 <h6><a href="{{product.url}}">{{ product.title }}</a></h6>
                                 <h6>{{ product.price | money }}</h6>
                             </div>
@@ -30,11 +33,14 @@
                 {% for product in collections['bottoms'].products %}
                 
                         <div class="card col-lg-3">
-                            <div class="card-body">
-                                <img style="width:12vw" src="{{product.featured_image | image_url }}" />
-                            </div>
-                            <div class="card-body">
-                                <hr class="product-separator" />
+                            <div class="card-body image-anchor row">
+                                <div class="col-12"
+                              style="
+                              background-image: url({{product.featured_image | image_url }});background-size:cover">
+                                </div>
+                              </div>
+                              <hr class="product-separator" />
+                              <div class="card-footer">
                                 <h6><a href="{{product.url}}">{{ product.title }}</a></h6>
                                 <h6>{{ product.price | money }}</h6>
                             </div>
@@ -51,11 +57,14 @@
                 {% for product in collections['shoes'].products %}
                 
                         <div class="card col-lg-3">
-                            <div class="card-body">
-                                <img style="width:12vw" src="{{product.featured_image | image_url }}" />
-                            </div>
-                            <div class="card-body">
-                                <hr class="product-separator" />
+                            <div class="card-body image-anchor row">
+                                <div class="col-12"
+                              style="
+                              background-image: url({{product.featured_image | image_url }});background-size:cover">
+                                </div>
+                              </div>
+                              <hr class="product-separator" />
+                              <div class="card-footer">
                                 <h6><a href="{{product.url}}">{{ product.title }}</a></h6>
                                 <h6>{{ product.price | money }}</h6>
                             </div>
@@ -66,5 +75,5 @@
             </div>
         </div>
         </div>
-    </div>      
+        
 </div>
