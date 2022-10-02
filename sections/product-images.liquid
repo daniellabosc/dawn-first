@@ -1,0 +1,14 @@
+<div class="container row">
+    {% for item in product.images %}
+    <div class="col-3 card">
+                <div class="card-body">
+                    <div
+                        style="width:280px;height:280px;
+                        background-image: url({{item | image_url}});
+                        background-size:contain;background-repeat:no-repeat">
+                    </div>
+                </div>
+        </div>
+    {% endfor %}
+
+</div>
