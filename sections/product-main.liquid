@@ -11,12 +11,15 @@
     </div>
     <div class="col-4">
         <div class="card">
+            <h2>show description {{settings.show-description}}</h2>
+        {% if settings.show-description %}
           <div class="card-body">
                 <h6 class="col-12">{{ product.title }}</h6>
                 <div class="pa-3">
                     {{product.description}}
                 </div>
             </div>
+        {% endif %}
             <div class="card-footer">
               <h2 class="col-12">{{ product.price | money }}</h2>
               <div class="card-footer">
@@ -43,12 +46,12 @@
     "tag": "section",
     "class": "product-main",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "show-description",
-        "label": "Show Description",
-        "default": true
-      }
+        {
+            "type": "checkbox",
+            "id": "show-description",
+            "label": "Show Description",
+            "default": true
+          }
     ]
   }
 {% endschema %}
