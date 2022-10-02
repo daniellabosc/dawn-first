@@ -1,21 +1,15 @@
 <div class="container row">
-    {% for item in product.images %}
+  {% for item in product.images %}
     <div class="col-3 card">
-                <div class="card-body">
-                    <img src="{{item | image_url}}" alt="product image" class="img-thumbnail">
-                    {% comment %} <div
-                        style="width:280px;height:280px;
-                        background-image: url({{item | image_url}});
-                        background-size:contain;background-repeat:no-repeat">
-                    </div> {% endcomment %}
-                </div>
-        </div>
-    {% endfor %}
-
+      <div class="card-body">
+        <img src="{{item | image_url}}" alt="product image" class="img-thumbnail">
+      </div>
+    </div>
+  {% endfor %}
 </div>
 
 {% schema %}
-{
+  {
     "name": "Slideshow",
     "tag": "section",
     "class": "slideshow",
@@ -24,8 +18,7 @@
         "type": "text",
         "id": "header",
         "label": "Header"
-      },
-      {
+      }, {
         "type": "select",
         "id": "vertical_alignment",
         "label": "Vertical alignment",
@@ -33,12 +26,10 @@
           {
             "value": "top",
             "label": "Top"
-          },
-          {
+          }, {
             "value": "middle",
             "label": "Middle"
-          },
-          {
+          }, {
             "value": "bottom",
             "label": "Bottom"
           }
@@ -47,4 +38,4 @@
       }
     ]
   }
-{% endschema %}
+{% endschema %}}}}

@@ -1,57 +1,71 @@
 <div class="row col-12">
-    <h4 class="header-block"><i>{{product.title}}</i></h4>
+  <h4 class="header-block">
+    <i>{{product.title}}
+    </i>
+  </h4>
 </div>
 <div class="row">
-    <div class="col-7">
-        <div class="card">
-            <div class="card-body">
-                <img src="{{product.featured_image | image_url}}" alt="product image" class="img-fluid">
-            </div>
-        </div>
+  <div class="col-7">
+    <div class="card">
+      <div class="card-body">
+        <img src="{{product.featured_image | image_url}}" alt="product image" class="img-fluid">
+      </div>
     </div>
-    <div class="col-4">
-        <div class="card">
-            <h2>show description {{settings.show-description}}</h2>
-        {% if settings.show-description %}
-          <div class="card-body">
-                <h6 class="col-12">{{ product.title }}</h6>
-                <div class="pa-3">
-                    {{product.description}}
-                </div>
-            </div>
-        {% endif %}
-            <div class="card-footer">
-              <h2 class="col-12">{{ product.price | money }}</h2>
-              <div class="card-footer">
-                {% form 'product', product %}
-                    <select name="id">
-                        <option value="0">select size</option>
-                    {% for variant in product.variants %}
-                        <option value={{ variant.id }}>
-                            {{ variant.title }}
-                        </option>
-                    {% endfor %}
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-large btn-primary">add to cart</button>
-               {% endform %}
-              </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <h2>show description
+        {{settings.show-description}}
+      </h2>
+      <div class="card-body">
+        <h6 class="col-12">{{ product.title }} {{ settings.description-modifier}}
+        </h6>
+        {% if settings.show-description == true %}
+          <div class="pa-3">
+            {{product.description}}
+           
           </div>
+        {% endif %}
+      </div>
+
+      <div class="card-footer">
+        <h2 class="col-12">{{ product.price | money }}
+        </h2>
+        <div class="card-footer">
+          {% form 'product', product %}
+            <select name="id">
+              <option value="0">select size</option>
+              {% for variant in product.variants %}
+                <option value={{ variant.id }}>
+                  {{ variant.title }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-large btn-primary">add to cart</button>
+        {% endform %}
+      </div>
     </div>
+  </div>
 </div>
 
 {% schema %}
-{
+  {
     "name": "Product Details",
     "tag": "section",
     "class": "product-main",
     "settings": [
-        {
-            "type": "checkbox",
-            "id": "show-description",
-            "label": "Show Description",
-            "default": true
-          }
+      {
+        "type": "checkbox",
+        "id": "show-description",
+        "label": "Show Description",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "description-modifier",
+        "label": "Description Modifier",
+        "default": "on sale!"
+      }
     ]
   }
 {% endschema %}
