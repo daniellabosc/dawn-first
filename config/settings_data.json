@@ -4,6 +4,25 @@
     "background-secondary": "#FFFFFF",
     "text-dark": "#333333",
     "accent-one": "burlywood",
-    "accent-two": "#E8ECF4"
+    "accent-two": "#E8ECF4",
+    "sections": {
+      "product-main": {
+        "type": "product-main",
+        "settings": {
+          "show-description": true,
+          "description-modifier": "NOW ON SALE!"
+        }
+      },
+      "product-images": {
+        "type": "product-images",
+        "settings": {
+          "header": "",
+          "vertical_alignment": "middle"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
