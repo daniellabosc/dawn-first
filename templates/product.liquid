@@ -28,18 +28,38 @@
                 </div>
                 <div class="card-footer">
                   <h2 class="col-12">{{ product.price | money }}</h2>
-                  {% form 'product', product %}
-                    <select name="id" style="visibility:hidden">
-                      {% for variant in product.variants %}
-                          <option value={{ variant.id }}>
-                            {{ variant.title }}
-                          </option>
-                      {% endfor %}
-                    </select><br/>
+                  <div class="card-footer">
+                    {% form 'product', product %}
+                        <select name="id">
+                            <option value="0">select size</option>
+                        {% for variant in product.variants %}
+                            <option value={{ variant.id }}>
+                                {{ variant.title }}
+                            </option>
+                        {% endfor %}
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-large btn-primary">add to cart</button>
                    {% endform %}
                   </div>
               </div>
         </div>
+    </div>
+    <div class="container row">
+        
+            {% for item in product.images %}
+            <div class="col-3 card">
+                   
+                        <div class="card-body">
+                            <div
+                                style="width:280px;height:280px;
+                                background-image: url({{item | image_url}});
+                                background-size:contain;background-repeat:no-repeat">
+                            </div>
+                        </div>
+                    
+                </div>
+            {% endfor %}
+       
     </div>
 </div>

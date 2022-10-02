@@ -3,6 +3,7 @@
     "background-primary": "#E8ECF4",
     "background-secondary": "#FFFFFF",
     "text-dark": "#333333",
-    "accent-one": "burlywood"
+    "accent-one": "burlywood",
+    "accent-two": "#E8ECF4"
   }
 }

@@ -25,6 +25,12 @@
         "id": "accent-one",
         "label": "Accent One",
         "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "accent-two",
+        "label": "Accent Two",
+        "default": "#ffffff"
       }
     ]
   }

@@ -5,7 +5,7 @@
   .navbar-nav{
     width:72vw;
     margin-left:12vw;
-    border-bottom:2px outset {{ settings.accent-one }};
+    
   }
   .nav-link{
     font-size:1.6em;
@@ -22,12 +22,21 @@
     position:relative;
     left:400
   }
-  .cart-icon{
-    width:32px;
-    height:32px;
-    margin-top:12px;
-    margin-left:6px
+  .cart-count{
+    z-index:999;
+    position:relative;
+    top:16px;
+    text-align:center;
+    font-weight:bold
+
   }
+  .cart-icon{
+    width:46px;
+    height:46px;
+    position:relative;
+    top:-28px;
+  }
+
 </style>
 
 <header>
@@ -43,13 +52,16 @@
                 <a class="nav-link" href="{{ link.url }}">{{ link.title}}</a>
             </li>
         {%- endfor %}
+        {% if cart.item_count > 0 %}
         <li>
           <a href="/cart">
-            <h6>{{ cart.item_count }}
+            <h4 class="cart-count" style="color:{{settings.accent-one}}!important">
+                {{ cart.item_count }}
+            </h4>
               <img src="/assets/cart-icon.png" class="cart-icon" />
-            </h6>
           </a>
         </li>
+      {% endif %}
       </ul>
       <div class="search-block">
       <form action="/search">
